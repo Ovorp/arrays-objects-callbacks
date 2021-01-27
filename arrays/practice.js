@@ -93,7 +93,15 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 
 //Code Here
 function evenFinder(nums) {
-  return nums.filter(even => even%2 == 0);
+  return nums.filter(isEven => isEven%2 == 0);
+  // You can also do the same thing with a for loop and push the even number from % onto a new array.
+  // let answer = [];
+  // for (let i = 0; i < nums.length; i++) {
+  //   if (nums[i]%2 == 0) {
+  //     answer.push(nums[i])
+  //   }
+  // }
+  // return answer;
 }
 
 
@@ -123,7 +131,21 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 */
 
 //Code Here
-
+function divider(arr){
+  let even = arr.filter(isEven => isEven%2 == 0);
+  let odd = arr.filter(isOdd => isOdd%2 ==1);
+  // you can also does this with for loops instead of the filter method, push each number to an odd or even array, then return the two arrays.
+  // for (let i = 0; i < arr.length; i++) {
+  //   if (arr[i]% == 0) {
+  //     even.push(arr[i]);
+  //   }
+  // }for (let i = 0; i < arr.length; i++) {
+  //   if (arr[i]% == 1) {
+  //     odd.push(arr[i]);
+  //   }
+  // }
+  return [even,odd];
+}
 
 
 ////////// PROBLEM 7 //////////
@@ -145,6 +167,15 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
+function finder(arr) {
+  let randomNumber = getRandomArbitrary();
+  for (let i = 0; i < arr.length; i++) {
+    if (randomNumber === arr[i]){
+      return true;
+    }
+  }
+  return false;
+}
 
 
 
@@ -175,6 +206,18 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //Code Here
 
+function removeItem(arr, item){
+  if (!arr || !item) {return []}
+  arr = arr.filter(grocery => grocery !== item)
+  return arr;
+};
+
+function addItem(arr, item){
+  if (!arr || !item) {return []}
+  arr.push(item);
+  return arr;
+}
+
 
 
 ////////// PROBLEM 9 //////////
@@ -184,7 +227,15 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
-
+function maker() {
+  let answer = [];
+  let i=1;
+  while (i<216) {
+    answer.push(i);
+    i++
+  }
+  return answer;
+}
 
 
 ////////// PROBLEM 10 //////////
@@ -200,7 +251,10 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 */
   
 //Code Here
-
+function addTen(arr) {
+  return arr.map(num => parseInt(num)).map(add => add+10);
+  
+}
 
 
 ////////// PROBLEM 11 //////////
@@ -226,7 +280,9 @@ for(var i = 0; i < num2; i++){
 
 //Code Here
 
-
+function longer (arr1, arr2) {
+  return arr1.length > arr2.length ? arr1 : arr2;
+}
 
 /*
   As a continuation of the previous problem, write another function called 'both'.
@@ -238,7 +294,17 @@ for(var i = 0; i < num2; i++){
 
 //Code Here
 
-
+function both(arr1, arr2) {
+  let newArr = [];
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr1[i] === arr2[j]){
+       newArr.push(arr1[i])
+      }
+    }
+  } 
+  return newArr;
+}
 
 ////////// PROBLEM 12 //////////
 
@@ -278,7 +344,7 @@ var colt = {
 */
 
 //Code Here
-
+devMountainEmployees.push(colt, cahlan, ryan, joe)
 
 
 /*
@@ -287,7 +353,11 @@ var colt = {
 */
 
 //Code Here
-
+for (let i=0; i < devMountainEmployees.length; i++){
+  if (devMountainEmployees[i].name === 'Cahlan') {
+    devMountainEmployees.splice(i, 1)
+  }
+}
 
 
 ////////// PROBLEM 13 //////////
@@ -299,7 +369,7 @@ var colt = {
 */
 
 //Code Here
-
+let user = [];
 
 
 /*
@@ -320,7 +390,19 @@ var user1 = {
 // Do not edit the code above.
 
 //Code Here
-
+var user2 = {
+  name: 'User 2',
+  email: 'user2@email.com',
+  password: 'user2password',
+  username: 'user2'
+};var user3 = {
+  name: 'User 3',
+  email: 'user3@email.com',
+  password: 'user3password',
+  username: 'user3'
+};
+let users = [];
+users.push(user1, user2, user3);
 
 
 /*
@@ -334,7 +416,11 @@ var user1 = {
 */
 
 //Code Here
-
+for (let i in users) {
+  if (users[i].email === 'mark.mciver@devmounta.in') {
+    users.splice(i,1)
+  }
+}
 
 
 /*
