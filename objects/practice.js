@@ -31,9 +31,9 @@ alert(me.name)
 //Code here
 let favoriteThings = {
   band: 'I do not have one',
-  food: 'Chicken Nuggets',
+  food: 'ramen',
   person: 'wife and kids',
-  book: 'Harry Potter',
+  book: 'flatland',
   movie: 'do not have one',
   holiday: 'Christmas'
 };
@@ -51,6 +51,9 @@ favoriteThings.brand = 'who has a favorite brand, I think it depends on the item
 */
 
 //Code here
+
+favoriteThing.food = 'Chicken Nuggets';
+favoriteThing.book = 'Harry Potter';
 
 ////////// PROBLEM 3 //////////
 
