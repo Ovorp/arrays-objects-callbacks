@@ -74,7 +74,7 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 
 //Code Here
 function reversedLooper(arr) {
-  for (i = arr.length-1; i >= 0; i--) {
+  for (let i = arr.length-1; i >= 0; i--) {
     alert(arr[i])
   }
 }
