@@ -121,6 +121,7 @@ contains(names, 'Colt', function(result){
 
 //Code Here
 function uniq(arr, func) {
+  //I tried to do it with for loops, but I would probably use methods or a set here to get rid of the duplicates.
     for (let i = 0; i < arr.length; i++) {
       for (let j = i+1; j < arr.length; j++){
         if(arr[i] === arr[j]) {
@@ -168,7 +169,7 @@ each(names, function(item, indice){
 
 // Code here
 function getUserById(arrUser, idUser, func) {
-  for (let i = 0; i < arrUser.length; i++) {
+  for (let i in arrUser) {
     if (arrUser[i].id === idUser) {
       return func(arrUser[i])
     }
