@@ -2,7 +2,7 @@
 
 # Project Summary
 
-In this project, we'll provide practice JavaScript problems to help you better understand `Objects`.
+In this project, we'll provide practice JavaScript problems to help you better understand `Arrays, Objects and Callbacks`.
 
 ## Setup
 
