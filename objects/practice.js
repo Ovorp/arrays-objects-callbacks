@@ -52,8 +52,8 @@ favoriteThings.brand = 'who has a favorite brand, I think it depends on the item
 
 //Code here
 
-favoriteThing.food = 'Chicken Nuggets';
-favoriteThing.book = 'Harry Potter';
+favoriteThings.food = 'Chicken Nuggets';
+favoriteThings.book = 'Harry Potter';
 
 ////////// PROBLEM 3 //////////
 
